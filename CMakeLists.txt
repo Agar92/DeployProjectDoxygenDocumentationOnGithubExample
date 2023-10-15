@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(DeployDoxygenDocs LANGUAGES CXX VERSION 1.2.3)
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VERSION 0.0.${PATCH_VERSION})
+
+project(DeployDoxygenDocs LANGUAGES CXX VERSION ${PROJECT_VERSION})
 
 add_executable(${PROJECT_NAME} main.cpp)
 
